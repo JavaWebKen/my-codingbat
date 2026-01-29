@@ -18,7 +18,8 @@ public class Warmup1 {
      * smiling or if neither of them is smiling. Return true if we are in trouble.
      */
     public boolean monkeyTrouble(boolean aSmile, boolean bSmile) {
-        return false;
+
+        return (aSmile == bSmile);
     }
 
     // url :: https://codingbat.com/prob/p154485
@@ -27,8 +28,13 @@ public class Warmup1 {
      * are the same, then return double their sum.
      */
     public int sumDouble(int a, int b) {
+
         int sum = a + b;
-        return (a == b) ? 2 * sum : sum;
+
+        if (a == b) {
+            return sum * 2;
+        }
+        return sum;
     }
 
     // url :: https://codingbat.com/prob/p116624
@@ -37,10 +43,11 @@ public class Warmup1 {
      * except return double the absolute difference if n is over 21.
      */
     public int diff21(int n) {
-        if (n > 21) {
-            return 2 * (n - 21);
-        }
-        return 21 - n;
+
+        int diff = Math.abs(n - 21);
+
+        return (n > 21) ? diff * 2 : diff;
+
     }
 
     // url :: https://codingbat.com/prob/p140449
@@ -51,6 +58,7 @@ public class Warmup1 {
      * trouble.
      */
     public boolean parrotTrouble(boolean talking, int hour) {
+
         return talking && (hour < 7 || hour > 20);
     }
 
@@ -60,7 +68,10 @@ public class Warmup1 {
      * their sum is 10.
      */
     public boolean makes10(int a, int b) {
-        return a == 10 || b == 10 || (a + b) == 10;
+
+        int sum = a + b ;
+
+        return a == 10 || b == 10 || sum == 10;
     }
 
     // url :: https://codingbat.com/prob/p184004
@@ -69,7 +80,14 @@ public class Warmup1 {
      * Note: Math.abs(num) computes the absolute value of a number.
      */
     public boolean nearHundred(int n) {
+      //  int diff100 = Math.abs(n - 100);
+      //  int diff200 = Math.abs(n - 200);
+
+      //  return diff100 <= 10 || diff200 <= 10;
+
         return Math.abs(100 - n) <= 10 || Math.abs(200 - n) <= 10;
+
+
     }
 
     // url :: https://codingbat.com/prob/p159227
@@ -79,10 +97,14 @@ public class Warmup1 {
      * if both are negative.
      */
     public boolean posNeg(int a, int b, boolean negative) {
+
         if (negative) {
             return a < 0 && b < 0;
         }
+
         return (a < 0 && b > 0) || (a > 0 && b < 0);
+
+
     }
 
     // url :: https://codingbat.com/prob/p191914
@@ -92,9 +114,7 @@ public class Warmup1 {
      * string unchanged. Note: use .equals() to compare 2 strings.
      */
     public String notString(String str) {
-        if (str == null) return "not";
-        if (str.startsWith("not")) return str;
-        return "not " + str;
+        return null;
     }
 
     // url :: https://codingbat.com/prob/p190570
@@ -105,8 +125,7 @@ public class Warmup1 {
      * inclusive).
      */
     public String missingChar(String str, int n) {
-        if (str == null || str.isEmpty()) return str;
-        return str.substring(0, n) + str.substring(n + 1);
+        return null;
     }
 
     // url :: https://codingbat.com/prob/p123384
@@ -115,12 +134,7 @@ public class Warmup1 {
      * chars have been exchanged.
      */
     public String frontBack(String str) {
-        if (str == null) return null;
-        int len = str.length();
-        if (len <= 1) return str;
-        char first = str.charAt(0);
-        char last = str.charAt(len - 1);
-        return last + str.substring(1, len - 1) + first;
+        return null;
     }
 
     // url :: https://codingbat.com/prob/p136351
@@ -130,9 +144,7 @@ public class Warmup1 {
      * there. Return a new string which is 3 copies of the front.
      */
     public String front3(String str) {
-        if (str == null) return null;
-        String front = str.length() < 3 ? str : str.substring(0, 3);
-        return front + front + front;
+        return null;
     }
 
     // url :: https://codingbat.com/prob/p161642
@@ -142,9 +154,7 @@ public class Warmup1 {
      * original string will be length 1 or more.
      */
     public String backAround(String str) {
-        if (str == null || str.length() == 0) return str;
-        String last = str.substring(str.length() - 1);
-        return last + str + last;
+        return null;
     }
 
     // url :: https://codingbat.com/prob/p112564
@@ -153,7 +163,7 @@ public class Warmup1 {
      * or a multiple of 5. Use the % "mod" operator -- see Introduction to Mod
      */
     public boolean or35(int n) {
-        return n % 3 == 0 || n % 5 == 0;
+        return false;
     }
 
     // url :: https://codingbat.com/prob/p183592
@@ -164,9 +174,7 @@ public class Warmup1 {
      * are there.
      */
     public String front22(String str) {
-        if (str == null) return null;
-        String front = str.length() < 2 ? str : str.substring(0, 2);
-        return front + str + front;
+        return null;
     }
 
     // url :: https://codingbat.com/prob/p191022
@@ -175,8 +183,7 @@ public class Warmup1 {
      * false otherwise.
      */
     public boolean startHi(String str) {
-        if (str == null) return false;
-        return str.startsWith("hi");
+        return false;
     }
 
     // url :: https://codingbat.com/prob/p192082
@@ -185,7 +192,7 @@ public class Warmup1 {
      * the other is greater than 100.
      */
     public boolean icyHot(int temp1, int temp2) {
-        return (temp1 < 0 && temp2 > 100) || (temp2 < 0 && temp1 > 100);
+        return false;
     }
 
     // url :: https://codingbat.com/prob/p144535
@@ -194,7 +201,7 @@ public class Warmup1 {
      * range 10..20 inclusive.
      */
     public boolean in1020(int a, int b) {
-        return (a >= 10 && a <= 20) || (b >= 10 && b <= 20);
+        return false;
     }
 
     // url :: https://codingbat.com/prob/p178986
@@ -203,11 +210,7 @@ public class Warmup1 {
      * inclusive. Given 3 int values, return true if 1 or more of them are teen.
      */
     public boolean hasTeen(int a, int b, int c) {
-        return isTeen(a) || isTeen(b) || isTeen(c);
-    }
-
-    private boolean isTeen(int n) {
-        return n >= 13 && n <= 19;
+        return false;
     }
 
     // url :: https://codingbat.com/prob/p165701
@@ -217,7 +220,7 @@ public class Warmup1 {
      * not both.
      */
     public boolean loneTeen(int a, int b) {
-        return isTeen(a) ^ isTeen(b);
+        return false;
     }
 
     // url :: https://codingbat.com/prob/p100905
@@ -227,11 +230,7 @@ public class Warmup1 {
      * string unchanged.
      */
     public String delDel(String str) {
-        if (str == null || str.length() < 4) return str;
-        if (str.substring(1, 4).equals("del")) {
-            return str.charAt(0) + str.substring(4);
-        }
-        return str;
+        return null;
     }
 
     // url :: https://codingbat.com/prob/p151713
@@ -240,8 +239,7 @@ public class Warmup1 {
      * 'm' can be anything, so "pix", "9ix" .. all count.
      */
     public boolean mixStart(String str) {
-        if (str == null || str.length() < 3) return false;
-        return str.substring(1, 3).equals("ix");
+        return false;
     }
 
     // url :: https://codingbat.com/prob/p199720
@@ -251,11 +249,7 @@ public class Warmup1 {
      * only if it is 'z', so "ozymandias" yields "oz".
      */
     public String startOz(String str) {
-        if (str == null || str.length() == 0) return "";
-        StringBuilder sb = new StringBuilder();
-        if (str.charAt(0) == 'o') sb.append('o');
-        if (str.length() > 1 && str.charAt(1) == 'z') sb.append('z');
-        return sb.toString();
+        return null;
     }
 
     // url :: https://codingbat.com/prob/p101887
@@ -263,7 +257,7 @@ public class Warmup1 {
      * Statement :: Given three int values, a b c, return the largest.
      */
     public int intMax(int a, int b, int c) {
-        return Math.max(a, Math.max(b, c));
+        return 0;
     }
 
     // url :: https://codingbat.com/prob/p172021
@@ -273,10 +267,7 @@ public class Warmup1 {
      * the absolute value of a number.
      */
     public int close10(int a, int b) {
-        int da = Math.abs(a - 10);
-        int db = Math.abs(b - 10);
-        if (da == db) return 0;
-        return da < db ? a : b;
+        return 0;
     }
 
     // url :: https://codingbat.com/prob/p132134
@@ -285,9 +276,7 @@ public class Warmup1 {
      * 30..40 inclusive, or they are both in the range 40..50 inclusive.
      */
     public boolean in3050(int a, int b) {
-        boolean in30 = (a >= 30 && a <= 40) && (b >= 30 && b <= 40);
-        boolean in40 = (a >= 40 && a <= 50) && (b >= 40 && b <= 50);
-        return in30 || in40;
+        return false;
     }
 
     // url :: https://codingbat.com/prob/p177372
@@ -296,11 +285,6 @@ public class Warmup1 {
      * the range 10..20 inclusive, or return 0 if neither is in that range.
      */
     public int max1020(int a, int b) {
-        boolean aIn = a >= 10 && a <= 20;
-        boolean bIn = b >= 10 && b <= 20;
-        if (aIn && bIn) return Math.max(a, b);
-        if (aIn) return a;
-        if (bIn) return b;
         return 0;
     }
 
@@ -310,10 +294,7 @@ public class Warmup1 {
      * chars.
      */
     public boolean stringE(String str) {
-        if (str == null) return false;
-        int count = 0;
-        for (char c : str.toCharArray()) if (c == 'e') count++;
-        return count >= 1 && count <= 3;
+        return false;
     }
 
     // url :: https://codingbat.com/prob/p125339
@@ -323,7 +304,7 @@ public class Warmup1 {
      * computes remainders, so 17 % 10 is 7.
      */
     public boolean lastDigit(int a, int b) {
-        return Math.abs(a) % 10 == Math.abs(b) % 10;
+        return false;
     }
 
     // url :: https://codingbat.com/prob/p125268
@@ -333,12 +314,7 @@ public class Warmup1 {
      * there. Note that str.toUpperCase() returns the uppercase version of a string.
      */
     public String endUp(String str) {
-        if (str == null) return null;
-        int len = str.length();
-        if (len <= 3) return str.toUpperCase();
-        String front = str.substring(0, len - 3);
-        String end = str.substring(len - 3).toUpperCase();
-        return front + end;
+        return null;
     }
 
     // url :: https://codingbat.com/prob/p196441
@@ -348,12 +324,8 @@ public class Warmup1 {
      * use char 0, 3, 6, ... and so on. N is 1 or more.
      */
     public String everyNth(String str, int n) {
-        if (str == null || n <= 0) return str;
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < str.length(); i += n) {
-            sb.append(str.charAt(i));
-        }
-        return sb.toString();
+        return null;
     }
+
 
 }

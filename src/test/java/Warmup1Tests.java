@@ -1,7 +1,7 @@
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class Warmup1Tests {
 
@@ -10,19 +10,19 @@ public class Warmup1Tests {
     @Disabled
     @Test
     public void sleepIn() {
-        assertEquals(true, warmup1.sleepIn(false, false));
-        assertEquals(false, warmup1.sleepIn(true, false));
-        assertEquals(true, warmup1.sleepIn(false, true));
-        assertEquals(true, warmup1.sleepIn(true, true));
+        assertTrue(warmup1.sleepIn(false, false));
+        assertFalse(warmup1.sleepIn(true, false));
+        assertTrue(warmup1.sleepIn(false, true));
+        assertTrue(warmup1.sleepIn(true, true));
     }
 
     @Disabled
     @Test
     public void monkeyTrouble() {
-        assertEquals(true, warmup1.monkeyTrouble(true, true));
-        assertEquals(true, warmup1.monkeyTrouble(false, false));
-        assertEquals(false, warmup1.monkeyTrouble(true, false));
-        assertEquals(false, warmup1.monkeyTrouble(false, true));
+        assertTrue(warmup1.monkeyTrouble(true, true));
+        assertTrue(warmup1.monkeyTrouble(false, false));
+        assertFalse(warmup1.monkeyTrouble(true, false));
+        assertFalse(warmup1.monkeyTrouble(false, true));
     }
 
 
@@ -59,78 +59,78 @@ public class Warmup1Tests {
     @Disabled
     @Test
     public void parrotTrouble() {
-        assertEquals(true, warmup1.parrotTrouble(true, 6));
-        assertEquals(false, warmup1.parrotTrouble(true, 7));
-        assertEquals(false, warmup1.parrotTrouble(false, 6));
-        assertEquals(true, warmup1.parrotTrouble(true, 21));
-        assertEquals(false, warmup1.parrotTrouble(false, 21));
-        assertEquals(false, warmup1.parrotTrouble(false, 20));
-        assertEquals(true, warmup1.parrotTrouble(true, 23));
-        assertEquals(false, warmup1.parrotTrouble(false, 23));
-        assertEquals(false, warmup1.parrotTrouble(true, 20));
-        assertEquals(false, warmup1.parrotTrouble(false, 12));
+        assertTrue(warmup1.parrotTrouble(true, 6));
+        assertFalse(warmup1.parrotTrouble(true, 7));
+        assertFalse(warmup1.parrotTrouble(false, 6));
+        assertTrue(warmup1.parrotTrouble(true, 21));
+        assertFalse(warmup1.parrotTrouble(false, 21));
+        assertFalse(warmup1.parrotTrouble(false, 20));
+        assertTrue(warmup1.parrotTrouble(true, 23));
+        assertFalse(warmup1.parrotTrouble(false, 23));
+        assertFalse(warmup1.parrotTrouble(true, 20));
+        assertFalse(warmup1.parrotTrouble(false, 12));
     }
 
     @Disabled
     @Test
     public void makes10() {
-        assertEquals(true, warmup1.makes10(9, 10));
-        assertEquals(false, warmup1.makes10(9, 9));
-        assertEquals(true, warmup1.makes10(1, 9));
-        assertEquals(true, warmup1.makes10(10, 1));
-        assertEquals(true, warmup1.makes10(10, 10));
-        assertEquals(true, warmup1.makes10(8, 2));
-        assertEquals(false, warmup1.makes10(8, 3));
-        assertEquals(true, warmup1.makes10(10, 42));
-        assertEquals(true, warmup1.makes10(12, -2));
+        assertTrue(warmup1.makes10(9, 10));
+        assertFalse(warmup1.makes10(9, 9));
+        assertTrue(warmup1.makes10(1, 9));
+        assertTrue(warmup1.makes10(10, 1));
+        assertTrue(warmup1.makes10(10, 10));
+        assertTrue(warmup1.makes10(8, 2));
+        assertFalse(warmup1.makes10(8, 3));
+        assertTrue(warmup1.makes10(10, 42));
+        assertTrue(warmup1.makes10(12, -2));
     }
 
     @Disabled
     @Test
     public void nearHundred() {
-        assertEquals(true, warmup1.nearHundred(93));
-        assertEquals(true, warmup1.nearHundred(90));
-        assertEquals(false, warmup1.nearHundred(89));
-        assertEquals(true, warmup1.nearHundred(110));
-        assertEquals(false, warmup1.nearHundred(111));
-        assertEquals(false, warmup1.nearHundred(121));
-        assertEquals(false, warmup1.nearHundred(-101));
-        assertEquals(false, warmup1.nearHundred(-209));
-        assertEquals(true, warmup1.nearHundred(190));
-        assertEquals(true, warmup1.nearHundred(209));
-        assertEquals(false, warmup1.nearHundred(0));
-        assertEquals(false, warmup1.nearHundred(5));
-        assertEquals(false, warmup1.nearHundred(-50));
-        assertEquals(true, warmup1.nearHundred(191));
-        assertEquals(false, warmup1.nearHundred(189));
-        assertEquals(true, warmup1.nearHundred(200));
-        assertEquals(true, warmup1.nearHundred(210));
-        assertEquals(false, warmup1.nearHundred(211));
-        assertEquals(false, warmup1.nearHundred(290));
+        assertTrue(warmup1.nearHundred(93));
+        assertTrue(warmup1.nearHundred(90));
+        assertFalse(warmup1.nearHundred(89));
+        assertTrue(warmup1.nearHundred(110));
+        assertFalse(warmup1.nearHundred(111));
+        assertFalse(warmup1.nearHundred(121));
+        assertFalse(warmup1.nearHundred(-101));
+        assertFalse(warmup1.nearHundred(-209));
+        assertTrue(warmup1.nearHundred(190));
+        assertTrue(warmup1.nearHundred(209));
+        assertFalse(warmup1.nearHundred(0));
+        assertFalse(warmup1.nearHundred(5));
+        assertFalse(warmup1.nearHundred(-50));
+        assertTrue(warmup1.nearHundred(191));
+        assertFalse(warmup1.nearHundred(189));
+        assertTrue(warmup1.nearHundred(200));
+        assertTrue(warmup1.nearHundred(210));
+        assertFalse(warmup1.nearHundred(211));
+        assertFalse(warmup1.nearHundred(290));
     }
 
     @Disabled
     @Test
     public void posNeg() {
-        assertEquals(true, warmup1.posNeg(1, -1, false));
-        assertEquals(true, warmup1.posNeg(-1, 1, false));
-        assertEquals(true, warmup1.posNeg(-4, -5, true));
-        assertEquals(false, warmup1.posNeg(-4, -5, false));
-        assertEquals(true, warmup1.posNeg(-4, 5, false));
-        assertEquals(false, warmup1.posNeg(-4, 5, true));
-        assertEquals(false, warmup1.posNeg(1, 1, false));
-        assertEquals(false, warmup1.posNeg(-1, -1, false));
-        assertEquals(false, warmup1.posNeg(1, -1, true));
-        assertEquals(false, warmup1.posNeg(-1, 1, true));
-        assertEquals(false, warmup1.posNeg(1, 1, true));
-        assertEquals(true, warmup1.posNeg(-1, -1, true));
-        assertEquals(true, warmup1.posNeg(5, -5, false));
-        assertEquals(true, warmup1.posNeg(-6, 6, false));
-        assertEquals(false, warmup1.posNeg(-5, -6, false));
-        assertEquals(false, warmup1.posNeg(-2, -1, false));
-        assertEquals(false, warmup1.posNeg(1, 2, false));
-        assertEquals(false, warmup1.posNeg(-5, 6, true));
-        assertEquals(true, warmup1.posNeg(-5, -5, true));
+        assertTrue(warmup1.posNeg(1, -1, false));
+        assertTrue(warmup1.posNeg(-1, 1, false));
+        assertTrue(warmup1.posNeg(-4, -5, true));
+        assertFalse(warmup1.posNeg(-4, -5, false));
+        assertTrue(warmup1.posNeg(-4, 5, false));
+        assertFalse(warmup1.posNeg(-4, 5, true));
+        assertFalse(warmup1.posNeg(1, 1, false));
+        assertFalse(warmup1.posNeg(-1, -1, false));
+        assertFalse(warmup1.posNeg(1, -1, true));
+        assertFalse(warmup1.posNeg(-1, 1, true));
+        assertFalse(warmup1.posNeg(1, 1, true));
+        assertTrue(warmup1.posNeg(-1, -1, true));
+        assertTrue(warmup1.posNeg(5, -5, false));
+        assertTrue(warmup1.posNeg(-6, 6, false));
+        assertFalse(warmup1.posNeg(-5, -6, false));
+        assertFalse(warmup1.posNeg(-2, -1, false));
+        assertFalse(warmup1.posNeg(1, 2, false));
+        assertFalse(warmup1.posNeg(-5, 6, true));
+        assertTrue(warmup1.posNeg(-5, -5, true));
     }
 
     @Disabled
@@ -199,28 +199,28 @@ public class Warmup1Tests {
     @Disabled
     @Test
     public void or35() {
-        assertEquals(true, warmup1.or35(3));
-        assertEquals(true, warmup1.or35(10));
-        assertEquals(false, warmup1.or35(8));
-        assertEquals(true, warmup1.or35(15));
-        assertEquals(true, warmup1.or35(5));
-        assertEquals(true, warmup1.or35(9));
-        assertEquals(false, warmup1.or35(4));
-        assertEquals(false, warmup1.or35(7));
-        assertEquals(true, warmup1.or35(6));
-        assertEquals(false, warmup1.or35(17));
-        assertEquals(true, warmup1.or35(18));
-        assertEquals(false, warmup1.or35(29));
-        assertEquals(true, warmup1.or35(20));
-        assertEquals(true, warmup1.or35(21));
-        assertEquals(false, warmup1.or35(22));
-        assertEquals(true, warmup1.or35(45));
-        assertEquals(true, warmup1.or35(99));
-        assertEquals(true, warmup1.or35(100));
-        assertEquals(false, warmup1.or35(101));
-        assertEquals(false, warmup1.or35(121));
-        assertEquals(false, warmup1.or35(122));
-        assertEquals(true, warmup1.or35(123));
+        assertTrue(warmup1.or35(3));
+        assertTrue(warmup1.or35(10));
+        assertFalse(warmup1.or35(8));
+        assertTrue(warmup1.or35(15));
+        assertTrue(warmup1.or35(5));
+        assertTrue(warmup1.or35(9));
+        assertFalse(warmup1.or35(4));
+        assertFalse(warmup1.or35(7));
+        assertTrue(warmup1.or35(6));
+        assertFalse(warmup1.or35(17));
+        assertTrue(warmup1.or35(18));
+        assertFalse(warmup1.or35(29));
+        assertTrue(warmup1.or35(20));
+        assertTrue(warmup1.or35(21));
+        assertFalse(warmup1.or35(22));
+        assertTrue(warmup1.or35(45));
+        assertTrue(warmup1.or35(99));
+        assertTrue(warmup1.or35(100));
+        assertFalse(warmup1.or35(101));
+        assertFalse(warmup1.or35(121));
+        assertFalse(warmup1.or35(122));
+        assertTrue(warmup1.or35(123));
     }
 
     @Disabled
@@ -238,71 +238,71 @@ public class Warmup1Tests {
     @Disabled
     @Test
     public void startHi() {
-        assertEquals(true, warmup1.startHi("hi there"));
-        assertEquals(true, warmup1.startHi("hi"));
-        assertEquals(false, warmup1.startHi("hello hi"));
-        assertEquals(false, warmup1.startHi("he"));
-        assertEquals(false, warmup1.startHi("h"));
-        assertEquals(false, warmup1.startHi(""));
-        assertEquals(false, warmup1.startHi("ho hi"));
-        assertEquals(true, warmup1.startHi("hi ho"));
+        assertTrue(warmup1.startHi("hi there"));
+        assertTrue(warmup1.startHi("hi"));
+        assertFalse(warmup1.startHi("hello hi"));
+        assertFalse(warmup1.startHi("he"));
+        assertFalse(warmup1.startHi("h"));
+        assertFalse(warmup1.startHi(""));
+        assertFalse(warmup1.startHi("ho hi"));
+        assertTrue(warmup1.startHi("hi ho"));
     }
 
     @Disabled
     @Test
     public void icyHot() {
-        assertEquals(true, warmup1.icyHot(120, -1));
-        assertEquals(true, warmup1.icyHot(-1, 120));
-        assertEquals(false, warmup1.icyHot(2, 120));
-        assertEquals(false, warmup1.icyHot(-1, 100));
-        assertEquals(false, warmup1.icyHot(-2, -2));
-        assertEquals(false, warmup1.icyHot(120, 120));
+        assertTrue(warmup1.icyHot(120, -1));
+        assertTrue(warmup1.icyHot(-1, 120));
+        assertFalse(warmup1.icyHot(2, 120));
+        assertFalse(warmup1.icyHot(-1, 100));
+        assertFalse(warmup1.icyHot(-2, -2));
+        assertFalse(warmup1.icyHot(120, 120));
     }
 
     @Disabled
     @Test
     public void in1020() {
-        assertEquals(true, warmup1.in1020(12, 99));
-        assertEquals(true, warmup1.in1020(21, 12));
-        assertEquals(false, warmup1.in1020(8, 99));
-        assertEquals(true, warmup1.in1020(99, 10));
-        assertEquals(true, warmup1.in1020(20, 20));
-        assertEquals(false, warmup1.in1020(21, 21));
-        assertEquals(false, warmup1.in1020(9, 9));
+        assertTrue(warmup1.in1020(12, 99));
+        assertTrue(warmup1.in1020(21, 12));
+        assertFalse(warmup1.in1020(8, 99));
+        assertTrue(warmup1.in1020(99, 10));
+        assertTrue(warmup1.in1020(20, 20));
+        assertFalse(warmup1.in1020(21, 21));
+        assertFalse(warmup1.in1020(9, 9));
     }
 
     @Disabled
     @Test
     public void hasTeen() {
-        assertEquals(true, warmup1.hasTeen(13, 20, 10));
-        assertEquals(true, warmup1.hasTeen(20, 19, 10));
-        assertEquals(true, warmup1.hasTeen(20, 10, 13));
-        assertEquals(false, warmup1.hasTeen(1, 20, 12));
-        assertEquals(true, warmup1.hasTeen(19, 20, 12));
-        assertEquals(true, warmup1.hasTeen(12, 20, 19));
-        assertEquals(false, warmup1.hasTeen(12, 9, 20));
-        assertEquals(true, warmup1.hasTeen(12, 18, 20));
-        assertEquals(true, warmup1.hasTeen(14, 2, 20));
-        assertEquals(false, warmup1.hasTeen(4, 2, 20));
-        assertEquals(false, warmup1.hasTeen(11, 22, 22));
+        assertTrue(warmup1.hasTeen(13, 20, 10));
+        assertTrue(warmup1.hasTeen(20, 19, 10));
+        assertTrue(warmup1.hasTeen(20, 10, 13));
+        assertFalse(warmup1.hasTeen(1, 20, 12));
+        assertTrue(warmup1.hasTeen(19, 20, 12));
+        assertTrue(warmup1.hasTeen(12, 20, 19));
+        assertFalse(warmup1.hasTeen(12, 9, 20));
+        assertTrue(warmup1.hasTeen(12, 18, 20));
+        assertTrue(warmup1.hasTeen(14, 2, 20));
+        assertFalse(warmup1.hasTeen(4, 2, 20));
+        assertFalse(warmup1.hasTeen(11, 22, 22));
     }
 
     @Disabled
     @Test
     public void loneTeen() {
-        assertEquals(true, warmup1.loneTeen(13, 99));
-        assertEquals(true, warmup1.loneTeen(21, 19));
-        assertEquals(false, warmup1.loneTeen(13, 13));
-        assertEquals(true, warmup1.loneTeen(14, 20));
-        assertEquals(true, warmup1.loneTeen(20, 15));
-        assertEquals(false, warmup1.loneTeen(16, 17));
-        assertEquals(true, warmup1.loneTeen(16, 9));
-        assertEquals(false, warmup1.loneTeen(16, 18));
-        assertEquals(false, warmup1.loneTeen(13, 19));
-        assertEquals(true, warmup1.loneTeen(13, 20));
-        assertEquals(true, warmup1.loneTeen(6, 18));
-        assertEquals(true, warmup1.loneTeen(99, 13));
-        assertEquals(false, warmup1.loneTeen(99, 99));
+        assertTrue(warmup1.loneTeen(13, 99));
+        assertTrue(warmup1.loneTeen(21, 19));
+        assertFalse(warmup1.loneTeen(13, 13));
+        assertTrue(warmup1.loneTeen(14, 20));
+        assertTrue(warmup1.loneTeen(20, 15));
+        assertFalse(warmup1.loneTeen(16, 17));
+        assertTrue(warmup1.loneTeen(16, 9));
+        assertFalse(warmup1.loneTeen(16, 18));
+        assertFalse(warmup1.loneTeen(13, 19));
+        assertTrue(warmup1.loneTeen(13, 20));
+        assertTrue(warmup1.loneTeen(6, 18));
+        assertTrue(warmup1.loneTeen(99, 13));
+        assertFalse(warmup1.loneTeen(99, 99));
     }
 
     @Disabled
@@ -324,13 +324,13 @@ public class Warmup1Tests {
     @Disabled
     @Test
     public void mixStart() {
-        assertEquals(true, warmup1.mixStart("mix snacks"));
-        assertEquals(true, warmup1.mixStart("pix snacks"));
-        assertEquals(false, warmup1.mixStart("piz snacks"));
-        assertEquals(true, warmup1.mixStart("nix"));
-        assertEquals(false, warmup1.mixStart("ni"));
-        assertEquals(false, warmup1.mixStart("n"));
-        assertEquals(false, warmup1.mixStart(""));
+        assertTrue(warmup1.mixStart("mix snacks"));
+        assertTrue(warmup1.mixStart("pix snacks"));
+        assertFalse(warmup1.mixStart("piz snacks"));
+        assertTrue(warmup1.mixStart("nix"));
+        assertFalse(warmup1.mixStart("ni"));
+        assertFalse(warmup1.mixStart("n"));
+        assertFalse(warmup1.mixStart(""));
     }
 
     @Disabled
@@ -385,18 +385,18 @@ public class Warmup1Tests {
     @Disabled
     @Test
     public void in3050() {
-        assertEquals(true, warmup1.in3050(30, 31));
-        assertEquals(false, warmup1.in3050(30, 41));
-        assertEquals(true, warmup1.in3050(40, 50));
-        assertEquals(false, warmup1.in3050(40, 51));
-        assertEquals(false, warmup1.in3050(39, 50));
-        assertEquals(false, warmup1.in3050(50, 39));
-        assertEquals(true, warmup1.in3050(40, 39));
-        assertEquals(true, warmup1.in3050(49, 48));
-        assertEquals(true, warmup1.in3050(50, 40));
-        assertEquals(false, warmup1.in3050(50, 51));
-        assertEquals(true, warmup1.in3050(35, 36));
-        assertEquals(false, warmup1.in3050(35, 45));
+        assertTrue(warmup1.in3050(30, 31));
+        assertFalse(warmup1.in3050(30, 41));
+        assertTrue(warmup1.in3050(40, 50));
+        assertFalse(warmup1.in3050(40, 51));
+        assertFalse(warmup1.in3050(39, 50));
+        assertFalse(warmup1.in3050(50, 39));
+        assertTrue(warmup1.in3050(40, 39));
+        assertTrue(warmup1.in3050(49, 48));
+        assertTrue(warmup1.in3050(50, 40));
+        assertFalse(warmup1.in3050(50, 51));
+        assertTrue(warmup1.in3050(35, 36));
+        assertFalse(warmup1.in3050(35, 45));
     }
 
     @Disabled
@@ -418,24 +418,24 @@ public class Warmup1Tests {
     @Disabled
     @Test
     public void stringE() {
-        assertEquals(true, warmup1.stringE("Hello"));
-        assertEquals(true, warmup1.stringE("Heelle"));
-        assertEquals(false, warmup1.stringE("Heelele"));
-        assertEquals(false, warmup1.stringE("Hll"));
-        assertEquals(true, warmup1.stringE("e"));
-        assertEquals(false, warmup1.stringE(""));
+        assertTrue(warmup1.stringE("Hello"));
+        assertTrue(warmup1.stringE("Heelle"));
+        assertFalse(warmup1.stringE("Heelele"));
+        assertFalse(warmup1.stringE("Hll"));
+        assertTrue(warmup1.stringE("e"));
+        assertFalse(warmup1.stringE(""));
     }
 
     @Disabled
     @Test
     public void lastDigit() {
-        assertEquals(true, warmup1.lastDigit(7, 17));
-        assertEquals(false, warmup1.lastDigit(6, 17));
-        assertEquals(true, warmup1.lastDigit(3, 113));
-        assertEquals(false, warmup1.lastDigit(114, 113));
-        assertEquals(true, warmup1.lastDigit(114, 4));
-        assertEquals(true, warmup1.lastDigit(10, 0));
-        assertEquals(false, warmup1.lastDigit(11, 0));
+        assertTrue(warmup1.lastDigit(7, 17));
+        assertFalse(warmup1.lastDigit(6, 17));
+        assertTrue(warmup1.lastDigit(3, 113));
+        assertFalse(warmup1.lastDigit(114, 113));
+        assertTrue(warmup1.lastDigit(114, 4));
+        assertTrue(warmup1.lastDigit(10, 0));
+        assertFalse(warmup1.lastDigit(11, 0));
     }
 
     @Disabled
