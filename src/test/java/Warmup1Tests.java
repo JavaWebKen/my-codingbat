@@ -135,7 +135,7 @@ public class Warmup1Tests {
 
     @Disabled
     @Test
-    public void notvoid() {
+    public void notString() {
         assertEquals("not candy", warmup1.notString("candy"));
         assertEquals("not x", warmup1.notString("x"));
         assertEquals("not bad", warmup1.notString("not bad"));
@@ -352,7 +352,7 @@ public class Warmup1Tests {
 
     @Disabled
     @Test
-    public void voidMax() {
+    public void intMax() {
         assertEquals(3, warmup1.intMax(1, 2, 3));
         assertEquals(3, warmup1.intMax(1, 3, 2));
         assertEquals(3, warmup1.intMax(3, 2, 1));
